@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { useRef, useState } from "react";
 import NavBar from "../components/navBar";
-import styles from "../styles/Home.module.css";
 
 export default function Feedback() {
 
@@ -33,7 +32,7 @@ export default function Feedback() {
       <NavBar />
 
       <div>
-        <form className="border-2 p-4 drop-shadow-md w-[50vh] flex flex-col rounded" onSubmit={handleSubmit}>
+        <form className="border-2 p-4 drop-shadow-md flex flex-col rounded md:w-[40vw] md:h-[40vh]" onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Name"
@@ -50,17 +49,17 @@ export default function Feedback() {
           />
           <button
             type="submit"
-            className="bg-blue-400 w-2/4 p-2 font-bold text-white self-center rounded"
+            className="bg-blue-400 w-2/4 p-2  my-2 font-bold text-white self-center rounded"
           >
             {" "}
             Submit{" "}
           </button>
         </form>
 
-        <div className="hidden drop-shadow-md border-2 mt-4 rounded p-4 text-center" ref={outputDivRef}>
-          <h3 className="font-semibold">Output Comes here</h3>
-          <p>Name: {userDetails.name}</p>
-          <p>Email: {userDetails.email}</p>
+        <div className="hidden drop-shadow-md border-2 mt-4 rounded p-4 md:w-[40vw]" ref={outputDivRef}>
+          <h3 className="font-semibold text-center mb-2">Output Comes here</h3>
+          <p className="outputTitle">Name: <span className="outputText">{userDetails.name}</span></p>
+          <p className="outputTitle">Email: <span className="outputText">{userDetails.email}</span></p>
         </div>
       </div>
     </div>

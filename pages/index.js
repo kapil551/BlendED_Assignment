@@ -34,11 +34,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className='drop-shadow-md border-2 p-4 w-[50vw] rounded'>
+      <div className='drop-shadow-md border-2 p-8 w-[50vw] rounded'>
         <p className='text-center font-semibold'>
         Count Down
           </p> 
-        <p className='text-center text-xl mt-2'>
+        <p className='text-center text-2xl mt-2'>
           {counter}
         </p>
       </div>
